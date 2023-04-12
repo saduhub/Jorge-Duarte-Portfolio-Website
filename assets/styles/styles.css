@@ -1,9 +1,9 @@
 :root{
     --background-color-1: rgb(2, 2, 2);
     --background-color-2: #0f0f0f;
-    --green-font-color: #1FC742;
-    --teal-font-color: rgba(100, 255, 255, 0.9);
-    --yellow-font-color: rgba(255, 255, 95, 0.9);
+    --green-font-color: #25fd30;
+    --teal-font-color: rgb(127, 254, 254);
+    --yellow-font-color: rgb(255, 255, 113);
     --purple-font-color: rgba(255, 150, 255, 1);
     --orange-font-color: rgba(255, 204, 153, 1);
     --standard-padding: 20px;
@@ -174,7 +174,13 @@ h1 {
 }
 
 .project-card-4 {
-  color: var(--orange-font-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: none;
+  color: var(--green-font-color);
+  text-shadow: 0px 0px 3px var(--green-font-color);
+  font-size: 1.5rem;
   grid-row: 1;
   grid-column: 2;
 }
@@ -222,13 +228,32 @@ h1 {
 }
 
 /* about section */
+#about {
+  margin: 20vh 20vw;
+  display: flex;
+  color: white;
+  text-shadow: 0px 0px 4px var(--purple-font-color);
+}
 
+#about > * {
+  padding: var(--standard-padding);
+}
+
+.Jorge {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
 
 
 /* Contact section */
+#contact {
+  margin-bottom: var(--standard-margin-bottom);
+}
+
 #contact > h4 {
-  margin-top: var(--standard-margin-bottom);
   text-align: center;
+  font-size: 2rem;
   color: var(--yellow-font-color);
   text-shadow: 0px 0px 3px var(--yellow-font-color);
 }
@@ -245,4 +270,14 @@ h1 {
   height: auto;
   padding: 5px;
   margin: 0px 20px;
+}
+
+
+/* footer */
+footer {
+  margin-top: var(--standard-margin-bottom);
+  color: white;
+  text-shadow: 0px 0px 1px white;
+  opacity: 0.7;
+  margin-bottom: 10px;
 }
