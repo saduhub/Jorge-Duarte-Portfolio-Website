@@ -1,19 +1,24 @@
 :root{
-    --background-color-1: black;
+    --background-color-1: rgb(2, 2, 2);
     --background-color-2: #0f0f0f;
-    --main-font-color: #1FC742;
+    --green-font-color: #1FC742;
+    --teal-font-color: rgba(100, 255, 255, 0.9);
+    --yellow-font-color: rgba(255, 255, 95, 0.9);
+    --purple-font-color: rgba(255, 150, 255, 1);
     --standard-padding: 20px;
     --standard-margin-bottom: 100px;
     --standard-margin: 20px;
 }
 
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--green-font-color);
+  text-shadow: 0px 0px 3px var(--green-font-color);
+}
+
 body {
   background: var(--background-color-1);
-  color: var(--main-font-color);
-  text-shadow: 0px 0px 5px var(--main-font-color);
-  /* opacity: 0.5; */
-  /* background-image: url(/assets/pictures/jon-tyson-gIVzDR6JRWc-unsplash.jpg), ; */
-    /* background: var(--background-color-1) */
 }
 
 
@@ -23,6 +28,11 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-bottom: var(--standard-margin-bottom);
+}
+
+div {
+  margin: 0;
+  padding: 0;
 }
 
 /* Header Section */
@@ -35,7 +45,27 @@ header {
 	top: 0;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.9);
-  padding: var(--standard-padding);
+  padding: 0 var(--standard-padding);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: var(--standard-margin);
+}
+
+div.icon > p {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0px 0px 4px var(--purple-font-color);
+}
+
+nav {
+  margin-right: var(--standard-margin);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul {
@@ -47,40 +77,81 @@ li {
 }
 
 a {
+  font-size: 1.5rem;
+  color: var(--teal-font-color);
   text-decoration: none;
-  color: var(--main-font-color);
-  text-shadow: 0px 0px 5px var(--main-font-color);
+  text-shadow: 0px 0px 3px var(--green-font-color);
+}
+
+.contact-me {
+  color: var(--yellow-font-color);
 }
 
 /* main section */
+
+/* Hero */
 #home{
   margin-bottom: var(--standard-margin-bottom);
+  position: relative;
+}
+
+.hello,
+.i-am,
+.developer {
+  position: absolute;
+  z-index: 1;
+  color: var(--purple-font-color);
+}
+
+.hello {
+  top: 25%;
+  left: 23%;
+  font-size: 1.3rem;
+  text-shadow: 0px 0px 3px var(--purple-font-color);
 }
 
 h1 {
   position: absolute;
-  top: 25%;
-  left: 20%;
+  Top: 30%;
+  left: 23%;
   z-index: 1;
+  font-size: 4rem;
   color: white;
-  text-shadow: 0px 0px 4px white;
+  text-shadow: 0px 0px 3px var(--purple-font-color);
+}
+
+.i-am {
+  top: 44%;
+  left: 45%;
+  font-size: 1.3rem;
+  text-shadow: 0px 0px 3px var(--purple-font-color);
+}
+
+.developer {
+  top: 50%;
+  left: 45%;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0px 0px 3px var(--purple-font-color);
 }
 
 .home-img img {
   width: 100vw;
   max-height: 500px;
-  opacity: 0.5;
+  opacity: 0.9;
 }
 
-main section{
-  margin-bottom: var(--standard-margin-bottom);
-}
-
+/* project section */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 0px 100px;
+  margin: 0vh 15vw;
+  padding: 0vh 5vw;
+  box-shadow: -15px 0 5px -10px rgba(0, 255, 255, 0.6);
+  margin-bottom: var(--standard-margin-bottom);
 }
 
 .project-card-1 {
@@ -94,11 +165,36 @@ main section{
 }
 
 .project-card-3 {
-  grid-row: 3;
+  grid-row: 1;
   grid-column: 3;
 }
 
 .project-card-4 {
-  grid-row: 1 / span 2;
-  grid-column: 3;
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.project-card-1,
+.project-card-2,
+.project-card-3,
+.project-card-4 {
+  position: relative;
+}
+
+.project-card-1 h2,
+.project-card-2 h2,
+.project-card-3 h2,
+.project-card-4 h2,
+.project-card-1 p,
+.project-card-2 p,
+.project-card-3 p,
+.project-card-4 p {
+  position: absolute;
+}
+
+.project-img-1,
+.project-img-2,
+.project-img-3 {
+  max-width: 350px;
+  max-height: 350px;
 }
