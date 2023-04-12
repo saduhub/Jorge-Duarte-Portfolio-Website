@@ -16,6 +16,7 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--green-font-color);
   text-shadow: 0px 0px 3px var(--green-font-color);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,12 +30,6 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-bottom: var(--standard-margin-bottom);
-  /* color: white; */
-}
-
-div {
-  margin: 0;
-  padding: 0;
 }
 
 /* Header Section */
@@ -78,7 +73,7 @@ li {
   margin: var(--standard-margin);
 }
 
-a {
+li a {
   font-size: 1.5rem;
   color: var(--teal-font-color);
   text-decoration: none;
@@ -89,9 +84,10 @@ a {
   color: var(--yellow-font-color);
 }
 
+
 /* main section */
 
-/* Hero */
+/* Home/banner */
 #home{
   margin-bottom: var(--standard-margin-bottom);
   position: relative;
@@ -168,11 +164,13 @@ h1 {
 .project-card-2 {
   grid-row: 2;
   grid-column: 2;
+  max-height: 250px;
 }
 
 .project-card-3 {
   grid-row: 1;
   grid-column: 3;
+  max-height: 250px;
 }
 
 .project-card-4 {
@@ -213,18 +211,20 @@ h1 {
   left: 5%;
 }
 
-.project-img-1,
+.project-img-1 {
+  border-radius: 10px;
+  max-height: 450px;
+}
+
 .project-img-2,
 .project-img-3 {
   border-radius: 10px;
-  max-height: 350px;
+  max-height: 250px;
 }
 
 .project-card-1:hover,
 .project-card-2:hover,
 .project-card-3:hover {
-  /* box-shadow: 
-  4px 4px 10px rgba(102, 205, 170, 1); */
   box-shadow: 
   4px 4px 10px rgba(127, 255, 212, 1);
 }
@@ -241,12 +241,11 @@ h1 {
   padding: var(--standard-padding);
 }
 
-.Jorge {
+.jorge {
   max-width: 300px;
   height: auto;
   border-radius: 10px;
 }
-
 
 /* Contact section */
 #contact {
@@ -274,7 +273,6 @@ h1 {
   margin: 0px 20px;
 }
 
-
 /* footer */
 footer {
   margin-top: var(--standard-margin-bottom);
@@ -283,6 +281,7 @@ footer {
   opacity: 0.7;
   margin-bottom: 10px;
 }
+
 
 /* Media queries */
 
@@ -293,7 +292,7 @@ footer {
   }
 }
 
-/* Target screens between 320px and 480px - older smartphone */
+/* Target screens between 320px and 767px - older smartphone */
 @media (min-width: 320px) and (max-width: 767px) {
   nav a,
   div.icon > p {
@@ -346,9 +345,6 @@ footer {
     grid-gap: 50px 50px;
     margin: 0vh 15vw;
     padding: 0vh 5vw;
-    /* box-shadow: -15px 0 5px -10px var(--orange-font-color);
-    text-shadow: 0px 0px 3px var(--orange-font-color);
-    margin-bottom: var(--standard-margin-bottom); */
   }
   
   .project-card-1 {
@@ -370,16 +366,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* text-shadow: none;
-    color: var(--green-font-color);
-    text-shadow: 0px 0px 3px var(--green-font-color);
-    font-size: 1.5rem; */
     grid-row: 1;
     grid-column: 1;
   }
 }
 
-/* Target screens between 1024px and 1280px - tablet landscape and small laptops*/
+/* Target screens between 768px and 1600px*/
 @media (min-width: 768px) and (max-width: 1600px) {
   .project-grid {
     text-align: center;
@@ -389,9 +381,6 @@ footer {
     grid-gap: 50px 50px;
     margin: 0vh 15vw;
     padding: 0vh 5vw;
-    /* box-shadow: -15px 0 5px -10px var(--orange-font-color);
-    text-shadow: 0px 0px 3px var(--orange-font-color);
-    margin-bottom: var(--standard-margin-bottom); */
   }
   
   .project-card-1 {
@@ -413,16 +402,12 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* text-shadow: none;
-    color: var(--green-font-color);
-    text-shadow: 0px 0px 3px var(--green-font-color);
-    font-size: 1.5rem; */
     grid-row: 1;
     grid-column: 2;
   }
 }
 
-/* Targets screens that are 3000px or larger and sets the maximum width of the body element to 3000px */
+/* Targets screens that are 2200px or larger and sets the maximum width of the body element to 2200px */
 @media (min-width: 2200px) {
   * {
     max-width: 2200px;
