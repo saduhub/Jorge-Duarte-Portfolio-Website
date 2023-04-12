@@ -136,6 +136,8 @@ h1 {
   font-weight: bold;
   color: white;
   text-shadow: 0px 0px 3px var(--purple-font-color);
+  max-width: 600px;
+  height: auto;
 }
 
 .home-img img {
@@ -178,8 +180,8 @@ h1 {
   flex-direction: column;
   justify-content: center;
   text-shadow: none;
-  color: var(--green-font-color);
-  text-shadow: 0px 0px 3px var(--green-font-color);
+  color: rgba(127, 255, 212, 1);
+  text-shadow: 0px 0px 3px rgba(127, 255, 212, 1);;
   font-size: 1.5rem;
   grid-row: 1;
   grid-column: 2;
@@ -280,4 +282,150 @@ footer {
   text-shadow: 0px 0px 1px white;
   opacity: 0.7;
   margin-bottom: 10px;
+}
+
+/* Media queries */
+
+/* Target screen smaller than 320px */
+@media (max-width: 320px) {
+  * {
+    min-width: 320px;
+  }
+}
+
+/* Target screens between 320px and 480px - older smartphone */
+@media (min-width: 320px) and (max-width: 767px) {
+  nav a,
+  div.icon > p {
+    font-size: 1.2rem;
+    color: var(--teal-font-color);
+    text-decoration: none;
+    text-shadow: 0px 0px 3px var(--green-font-color);
+  }
+
+  .hello {
+    top: 35%;
+    left: 40%;
+    font-size: 1rem;
+  }
+  
+  h1 {
+    top: 40%;
+    left: 40%; 
+    font-size: 1.5rem;
+  }
+  
+  .i-am {
+    top: 50%;
+    left: 40%;
+    font-size: 1rem;
+  }
+  
+  .developer {
+    top: 55%;
+    left: 40%;
+    font-size: 1.5rem;
+    max-width: 600px;
+    height: auto;
+  }
+  
+  
+  #about {
+    margin: 20vh 20vw;
+    display: block;
+    color: white;
+    text-shadow: 0px 0px 4px var(--purple-font-color);
+    text-align: center;
+  }
+
+  .project-grid {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 50px 50px;
+    margin: 0vh 15vw;
+    padding: 0vh 5vw;
+    /* box-shadow: -15px 0 5px -10px var(--orange-font-color);
+    text-shadow: 0px 0px 3px var(--orange-font-color);
+    margin-bottom: var(--standard-margin-bottom); */
+  }
+  
+  .project-card-1 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  
+  .project-card-2 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  
+  .project-card-3 {
+    grid-row: 4;
+    grid-column: 1;
+  }
+  
+  .project-card-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* text-shadow: none;
+    color: var(--green-font-color);
+    text-shadow: 0px 0px 3px var(--green-font-color);
+    font-size: 1.5rem; */
+    grid-row: 1;
+    grid-column: 1;
+  }
+}
+
+/* Target screens between 1024px and 1280px - tablet landscape and small laptops*/
+@media (min-width: 768px) and (max-width: 1600px) {
+  .project-grid {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 50px 50px;
+    margin: 0vh 15vw;
+    padding: 0vh 5vw;
+    /* box-shadow: -15px 0 5px -10px var(--orange-font-color);
+    text-shadow: 0px 0px 3px var(--orange-font-color);
+    margin-bottom: var(--standard-margin-bottom); */
+  }
+  
+  .project-card-1 {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  
+  .project-card-2 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  
+  .project-card-3 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  
+  .project-card-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* text-shadow: none;
+    color: var(--green-font-color);
+    text-shadow: 0px 0px 3px var(--green-font-color);
+    font-size: 1.5rem; */
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+
+/* Targets screens that are 3000px or larger and sets the maximum width of the body element to 3000px */
+@media (min-width: 2200px) {
+  * {
+    max-width: 2200px;
+    margin: 0 auto;
+  }
 }
