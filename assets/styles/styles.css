@@ -5,6 +5,7 @@
     --teal-font-color: rgba(100, 255, 255, 0.9);
     --yellow-font-color: rgba(255, 255, 95, 0.9);
     --purple-font-color: rgba(255, 150, 255, 1);
+    --orange-font-color: rgba(255, 204, 153, 1);
     --standard-padding: 20px;
     --standard-margin-bottom: 100px;
     --standard-margin: 20px;
@@ -28,6 +29,7 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-bottom: var(--standard-margin-bottom);
+  /* color: white; */
 }
 
 div {
@@ -144,13 +146,15 @@ h1 {
 
 /* project section */
 .project-grid {
+  text-align: center;
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(3, auto);
   grid-gap: 0px 100px;
   margin: 0vh 15vw;
   padding: 0vh 5vw;
-  box-shadow: -15px 0 5px -10px rgba(0, 255, 255, 0.6);
+  box-shadow: -15px 0 5px -10px var(--orange-font-color);
+  text-shadow: 0px 0px 3px var(--orange-font-color);
   margin-bottom: var(--standard-margin-bottom);
 }
 
@@ -170,31 +174,75 @@ h1 {
 }
 
 .project-card-4 {
+  color: var(--orange-font-color);
   grid-row: 1;
   grid-column: 2;
 }
 
 .project-card-1,
 .project-card-2,
-.project-card-3,
-.project-card-4 {
+.project-card-3 {
+  color: var(--orange-font-color);
+  border-radius: 10px;
   position: relative;
+  transition: box-shadow 0.6s ease-in-out;
 }
 
 .project-card-1 h2,
 .project-card-2 h2,
-.project-card-3 h2,
-.project-card-4 h2,
+.project-card-3 h2 {
+  border-bottom: solid 1px var(--orange-font-color);
+  position: absolute;
+  top: 75%;
+  left: 5%;
+}
+
 .project-card-1 p,
 .project-card-2 p,
-.project-card-3 p,
-.project-card-4 p {
+.project-card-3 p {
   position: absolute;
+  top: 85%;
+  left: 5%;
 }
 
 .project-img-1,
 .project-img-2,
 .project-img-3 {
-  max-width: 350px;
+  border-radius: 10px;
   max-height: 350px;
+}
+
+.project-card-1:hover,
+.project-card-2:hover,
+.project-card-3:hover {
+  /* box-shadow: 
+  4px 4px 10px rgba(102, 205, 170, 1); */
+  box-shadow: 
+  4px 4px 10px rgba(127, 255, 212, 1);
+}
+
+/* about section */
+
+
+
+/* Contact section */
+#contact > h4 {
+  margin-top: var(--standard-margin-bottom);
+  text-align: center;
+  color: var(--yellow-font-color);
+  text-shadow: 0px 0px 3px var(--yellow-font-color);
+}
+
+.links {
+  display: flex;
+  padding: 10px 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-link {
+  max-width: 80px;
+  height: auto;
+  padding: 5px;
+  margin: 0px 20px;
 }
