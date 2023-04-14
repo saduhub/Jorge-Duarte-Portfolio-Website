@@ -211,7 +211,7 @@ h1 {
   position: absolute;
   top: 85%;
   left: 5%;
-  margin-top: 5px;
+  /* margin-top: 5px; */
 }
 
 .project-img-1 {
@@ -444,6 +444,10 @@ footer {
   .project-card-2 h2,
   .project-card-3 h2 {
     border-bottom: none;
+  }
+
+  .project-card-1 h2 {
+    top: 80%;
   }
 
   #about {
