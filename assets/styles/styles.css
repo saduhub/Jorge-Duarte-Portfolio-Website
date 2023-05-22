@@ -192,26 +192,8 @@ h1 {
 .project-card-3 {
   color: var(--orange-font-color);
   border-radius: 10px;
-  position: relative;
+  /* position: relative; */
   transition: box-shadow 0.6s ease-in-out;
-}
-
-.project-card-1 h2,
-.project-card-2 h2,
-.project-card-3 h2 {
-  border-bottom: solid 1px var(--orange-font-color);
-  position: absolute;
-  top: 75%;
-  left: 5%;
-}
-
-.project-card-1 p,
-.project-card-2 p,
-.project-card-3 p {
-  position: absolute;
-  top: 85%;
-  left: 5%;
-  /* margin-top: 5px; */
 }
 
 .project-img-1 {
